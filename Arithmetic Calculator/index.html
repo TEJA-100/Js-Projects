@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Keyboard Calculator</title>
+  <link rel="icon" href="🧮" type="icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body class="bg-black min-h-screen flex items-center justify-center">
+
+  <div class="bg-zinc-900 p-6 sm:p-8 rounded-xl shadow-xl 
+              w-[92%] max-w-[420px] mx-auto">
+
+      <h2 class="text-2xl font-bold text-center text-cyan-400 mb-6">
+        Arithmetic Calculator 🧮
+      </h2>
+
+      <input 
+        type="number" 
+        id="num1"
+        placeholder="Enter your first number"
+        class="w-full p-4 text-lg rounded bg-zinc-800 text-white mb-4 outline-none focus:ring-2 focus:ring-cyan-400"
+      >
+
+      <select 
+        id="operator"
+        class="w-full p-4 text-lg rounded bg-zinc-800 text-white mb-4 outline-none focus:ring-2 focus:ring-cyan-400"
+      >
+        <option value="+">Addition (+)</option>
+        <option value="-">Subtraction (−)</option>
+        <option value="*">Multiplication (×)</option>
+        <option value="/">Division (÷)</option>
+        <option value="**">Power (^)</option>
+        <option value="%">Modulus (%)</option>
+      </select>
+
+      <input 
+        type="number" 
+        id="num2"
+        placeholder="Enter your second number"
+        class="w-full p-4 text-lg rounded bg-zinc-800 text-white mb-4 outline-none focus:ring-4 focus:ring-cyan-400"
+      >
+
+      <button 
+        onclick="calculate()"
+        class="w-full bg-cyan-500 hover:bg-cyan-600 text-black font-bold rounded transition flex items-center justify-center p-4 text-lg"
+      >
+        Calculate
+      </button>
+
+      <div 
+        id="result"
+        class="mt-5 text-center text-lg font-semibold text-green-400"
+      >
+        Result :
+      </div>
+  </div>
+
+</body>
+</html>
