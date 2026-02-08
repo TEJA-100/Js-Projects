@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HMS Converter ⌚</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+body{
+    background:#242124;
+}
+h3
+{
+    color:aqua;
+}
+.card{
+    background:#1f1f1f;
+}
+</style>
+</head>
+<body class="d-flex align-items-center justify-content-center min-vh-100">
+    <div class="card p-4 shadow-lg text-center" style="max-width: 350px; width: 100%;">
+        <h3 class="mb-2"> HMS  Converter ⌚</h3>
+        <p class="text-white mb-3">Convert sec into Hours & Minutes</p>
+        <p class="text-white mb-3 text-start">Enter Your Time(Seconds):</p>
+        <input placeholder="Enter Your Time [Hrs,Mins,Secs]" id="timeinput" type="number" 
+        class="form-control mb-3 bg-dark text-white border-0">
+        <button onclick="Convert()" class="btn btn-success w-100 py-2 mt-3">
+            Convert
+        </button>
+        
+        <p id="result" class="text-sucsess mt-2"></p>
+        <a class="text-white m-3 text-center"  href="https://tejasai-gudla.netlify.app/">Design By Teja Sai 🧑‍💻</a>
+    </div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
