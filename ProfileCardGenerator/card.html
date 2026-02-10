@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile Card</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="d-flex justify-content-center align-items-center min-vh-100 bg-light">
+
+<div id="cardOutput"></div>
+
+<script>
+  const data = JSON.parse(localStorage.getItem("profileData"));
+
+  console.log("Loaded Data:", data); // DEBUG
+
+  if (!data) {
+    document.getElementById("cardOutput").innerHTML =
+      "<h4 class='text-danger'>No data found! Please generate your card first.</h4>";
+  } else {
+    document.getElementById("cardOutput").innerHTML = `
+      <div class="card shadow-lg text-center p-3" 
+       style="max-width:450px; width:100%; margin:10px; border: 2px solid #6c757d;">
+        <img src="${data.photo || 'https://via.placeholder.com/300x200'}" class="card-img-top rounded-circle" 
+        style="border-radius:100px; width:150px; height:150px; object-fit:cover; margin:auto; border: 4px solid #0d6efd;" alt="Profile Photo">
+        <div class="card-body">
+          <h4 class="text-primary">Hello, I'm ${data.name}</h4>
+          <p class="text-muted">I'm ${data.role}</p>
+          <p>${data.bio}</p>
+          <h5 class="text-center text-primary ">Skills 🧑‍💻</h5>
+          <p>
+            ${data.skills ? 
+            data.skills.split(",")
+            .map(skill => `<span class="badge bg-secondary me-1 mb-1">
+              ${skill.trim()}</span>`).join("") 
+              : ""}
+            </p>
+          <p><b></b> <i class="bi bi-geo-alt-fill"></i>  ${data.location}</p> <hr>
+          <p class="text-muted text-center">Connect with me</p>
+          <div class="d-flex justify-content-center gap-2 flex-wrap">
+            ${data.linkedin ? `<a href="${data.linkedin}" target="_blank" class="btn btn-outline-primary btn-sm">LinkedIn</a>` : ""}
+            ${data.github ? `<a href="${data.github}" target="_blank" class="btn btn-outline-dark btn-sm">GitHub</a>` : ""}
+            ${data.gmail ? `<a href="mailto:${data.gmail}" class="btn btn-outline-danger btn-sm">Email</a>` : ""}
+            ${data.others ? `<a href="${data.others}" target="_blank" class="btn btn-outline-warning btn-sm">Others</a>` : ""}
+
+            
+          </div>
+          
+        </div>
+        <a href="index.html" class="text-info"> Edit Profile<i class="bi bi-arrow-bar-left"></i> </a>
+      </div>
+    `;
+
+  }
+
+</script>
+
+
+</body>
+</html>
