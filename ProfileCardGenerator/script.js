@@ -88,3 +88,7 @@ if (!gmail.test(gmailInput.value)) {
   };
   reader.readAsDataURL(photoInput.files[0]);
 }
+
+function clearData(){
+  document.getElementById("userForm").reset();
+}
