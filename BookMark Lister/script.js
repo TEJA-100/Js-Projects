@@ -36,7 +36,7 @@ function displayBookmark() {
         bookmarkItem.classList.add("bookmark-item");
         bookmarkItem.innerHTML = `
            <hr>
-            <h4 class="mt-0 text-secondary">Your Bookmarks</h4>
+            
             <div class="d-flex justify-content-between align-items-center mb-2">
             <div>
               <h5 class="mb-0">${bookmark.name}</h5>
