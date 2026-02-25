@@ -110,7 +110,6 @@ ECE Student at Aditya University🧑‍🎓
 - Based on the User Inputs like Text/Url
 - Its Generates QR codes
 - Uses external API
-
   <img width="838" height="717" alt="Image" src="https://github.com/user-attachments/assets/d6996ea8-8518-4625-bafb-dcd9c97377e4" />
   #### 🔗 Demo Link: https://js-projects-inon.vercel.app/
   ```
