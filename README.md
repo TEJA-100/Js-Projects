@@ -103,6 +103,7 @@ ECE Student at Aditya University🧑‍🎓
 - User Details Validate
 
   <img width="821" height="844" alt="Image" src="https://github.com/user-attachments/assets/e3a7cd47-3044-43f8-9ac9-2ed4478a2c04" />
+  <img width="1917" height="868" alt="Image" src="https://github.com/user-attachments/assets/d624ea11-9340-4229-b3d4-d947c7c77339" />
 #### 🔗 Demo Link: https://js-projects-ashy.vercel.app/
 
 
